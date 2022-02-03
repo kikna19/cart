@@ -1,0 +1,120 @@
+mat-toolbar-row{
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding-top: 2rem;
+  h1{
+    text-transform: capitalize;
+  }
+  main{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 2rem;
+    border-bottom: .1rem solid black;
+    div:nth-child(1){
+      display: block;
+      text-align: center;
+      width: 70%;
+      h2{
+        text-transform: capitalize;
+      }
+    }
+    div:nth-child(2){
+      display: block;
+      text-align: center;
+      width: 30%;
+      border-left-width: .1rem;
+      border-left-style: solid;
+      border-left-color: black;
+      h2{
+        text-transform: capitalize;
+      }
+    }
+  }
+  .add-items{
+    display: flex;
+    justify-content: start;
+    height: 4rem;
+    width: 100%;
+    margin-top: 1rem;
+
+    div{
+      margin-left: 2rem;
+    }
+    button{
+      text-transform: capitalize;
+    }
+    div:nth-child(1){
+      button{
+       color: black;
+      }
+    }
+    div:nth-child(2){
+      button{
+        background: #f13838;
+      }
+    }
+    div:nth-child(3){
+      button{
+        background: #6bc061;
+      }
+    }
+  }
+  .full-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 100%;
+    border-bottom: .2rem solid #eac037;
+    margin-top: 2rem;
+   div:nth-child(1){
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     flex-direction: row;
+     width: 70%;
+     height: 100%;
+
+     p{
+       text-transform: capitalize;
+       font-family: "Andale Mono";
+       font-size: 1rem;
+       margin-top: .5rem;
+     }
+
+    }
+    div:nth-child(2){
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding-left: 10%;
+      width: 20%;
+      p{
+        margin-top: .5rem;
+        font-family: "Arial Black";
+        text-transform: capitalize;
+      }
+    }
+  }
+  .total{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    height: 4rem;
+    background: #3472cb;
+    div{
+      text-transform: capitalize;
+      font-size: 1rem;
+      color: black;
+      font-family: "Arial Black";
+      margin-left: 5rem;
+    }
+  }
+}

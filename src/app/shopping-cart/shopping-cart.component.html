@@ -1,0 +1,44 @@
+<mat-toolbar-row>
+  <h1>shopping cart</h1>
+  <main>
+    <div>
+      <h2>item description</h2>
+    </div>
+    <div>
+      <h2>item price</h2>
+    </div>
+  </main>
+  <div class="add-items">
+    <div>
+      <button mat-mini-fab (click)="addItem()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div>
+      <button mat-button (click)="deleteAll()">delete all</button>
+    </div>
+    <div>
+      <button mat-button (click)="buyAll()" >buy all</button>
+    </div>
+  </div>
+  <div *ngFor="let item of cartList$ | async" class="full-cart">
+    <div>
+      <p>{{'name: ' + item[0].name}}</p>
+      <p>{{'from: ' + item[1].country}}</p>
+      <p>{{'quality: ' + item[2].quality}}</p>
+      <p>{{'quantity: ' + item[3].quantity}}</p>
+    </div>
+    <div>
+      <p>{{item[4].price * item[3].quantity + ' $'}}</p>
+      <button mat-mini-fab>
+        <mat-icon (click)="deleteItem(item[6].id)">delete</mat-icon>
+      </button>
+      <button mat-mini-fab [disabled]="item[5].disabled" (click)="editItem(item[6].id)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="total">
+    <div>{{'total  '  + total + ' $'}}</div>
+  </div>
+</mat-toolbar-row>
